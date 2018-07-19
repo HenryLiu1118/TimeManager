@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#97a0d5"
+        android:gravity="center"
+        android:text="test"
+        android:textSize="15dp" />
+    <LinearLayout
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Hours"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor="@color/Buttoncolor"
+                android:text="Hours"/>
+
+            <EditText
+                android:id="@+id/et_modify"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:hint="Type Your new Subcategory Name"
+                android:textColor="@color/Buttoncolor"
+                android:textSize="9dp"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_modify"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/SmallButtonColor5"
+            android:textColor="@color/ButtonText"
+            android:layout_margin="5dp"
+            android:textAllCaps="false"
+            android:layout_height="match_parent"
+            android:textSize="15dp"
+            android:text="Modify"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+    <!--
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:background="@color/SmallButtonColor4"
+                android:textColor="@color/ButtonText"
+                android:layout_margin="5dp"
+                android:layout_height="match_parent"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:text="Delete"/>-->
+

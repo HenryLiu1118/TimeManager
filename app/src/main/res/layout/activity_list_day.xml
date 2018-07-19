@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListDay">
+
+    <LinearLayout
+        android:layout_weight="7"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <Button
+            android:id="@+id/bt_mon"
+            android:onClick="WeekDaySelectClick"
+            android:text="M"
+            android:textAllCaps="false"
+            android:textSize="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/SmallButtonColor4"
+            android:textColor="@color/ButtonText"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bt_tue"
+            android:onClick="WeekDaySelectClick"
+            android:text="Tu"
+            android:textAllCaps="false"
+            android:textSize="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/SmallButtonColor5"
+            android:textColor="@color/ButtonText"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bt_wed"
+            android:onClick="WeekDaySelectClick"
+            android:text="W"
+            android:textAllCaps="false"
+            android:textSize="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/SmallButtonColor6"
+            android:textColor="@color/ButtonText"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bt_thur"
+            android:onClick="WeekDaySelectClick"
+            android:text="Th"
+            android:textAllCaps="false"
+            android:textSize="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/SmallButtonColor4"
+            android:textColor="@color/ButtonText"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bt_fri"
+            android:onClick="WeekDaySelectClick"
+            android:text="F"
+            android:textAllCaps="false"
+            android:textSize="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/SmallButtonColor5"
+            android:textColor="@color/ButtonText"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bt_sat"
+            android:onClick="WeekDaySelectClick"
+            android:text="Sa"
+            android:textAllCaps="false"
+            android:textSize="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/SmallButtonColor6"
+            android:textColor="@color/ButtonText"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bt_sun"
+            android:onClick="WeekDaySelectClick"
+            android:text="S"
+            android:textAllCaps="false"
+            android:textSize="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@color/SmallButtonColor4"
+            android:textColor="@color/ButtonText"
+            android:layout_margin="3dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_listname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Activity List of All day"
+        android:textSize="15dp"
+        android:gravity="center"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#000000" />
+
+    <ListView
+        android:layout_weight="80"
+        android:id="@+id/LV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></ListView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#000000" />
+
+    <Button
+        android:id="@+id/bt_all"
+        android:layout_weight="7"
+        android:onClick="AllWeekDaySelectClick"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="10dp"
+        android:textAllCaps="false"
+        android:background="@color/Buttoncolor"
+        android:textColor="@color/ButtonText"
+        android:layout_margin="5dp"
+        android:text="ALL Day List"/>
+</LinearLayout>

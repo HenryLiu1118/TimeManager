@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- First Linear Layout-->
+    <LinearLayout
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sumtitle"
+                android:background="#76b3d1eb"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:text="Summary"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp" />
+
+            <ScrollView
+                android:layout_weight="12"
+                android:padding="2dp"
+                android:layout_width="match_parent"
+                android:background="#c3f1d2"
+                android:layout_height="0dp">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_sum"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Summary detail"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:id="@+id/tv_Ave"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/tv_WeekDayAve"
+                        android:layout_marginTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_weight="5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <Button
+                    android:layout_weight="5"
+                    android:id="@+id/DayDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="CheckDaily"
+                    android:textAllCaps="false"
+                    android:background="@color/Buttoncolor"
+                    android:textColor="@color/ButtonText"
+                    android:layout_margin="5dp"
+                    android:text="Click for daily information" />
+                <Button
+                    android:layout_weight="5"
+                    android:id="@+id/EntryDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="CheckRecord"
+                    android:textAllCaps="false"
+                    android:background="@color/SmallButtonColor4"
+                    android:textColor="@color/ButtonText"
+                    android:layout_margin="5dp"
+                    android:text="Click for Record information" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#FF00FF00" />
+
+    </LinearLayout>
+
+    <!--Second layout-->
+    <LinearLayout
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:id="@+id/tv_cate"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:text="Category Summary: Click for details"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="#76b3d1eb"
+            android:textSize="15dp" />
+
+        <!--School-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="10"
+            android:layout_height="0dp"
+            android:background="#5485c1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/school"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:onClick="CheckSchool"
+                android:layout_margin="5dp"
+                android:background="@color/SmallButtonColor1"
+                android:textAllCaps="false"
+                android:text="School Activity" />
+
+            <TextView
+                android:id="@+id/tv_School"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!--Skill-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="10"
+            android:layout_height="0dp"
+            android:background="#74d6a5"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/skill"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:onClick="CheckSkill"
+                android:layout_margin="5dp"
+                android:background="@color/SmallButtonColor2"
+                android:textAllCaps="false"
+                android:text="Skill Activity" />
+
+            <TextView
+                android:id="@+id/tv_Skill"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!--Intern-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="10"
+            android:layout_height="0dp"
+            android:background="#52beca"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Intern"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:onClick="CheckIntern"
+                android:layout_margin="5dp"
+                android:background="@color/SmallButtonColor3"
+                android:textAllCaps="false"
+                android:text="Intern Activity" />
+
+            <TextView
+                android:id="@+id/tv_Intern"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#FF00FF00" />
+
+    <!-- Third Linear Layout-->
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:orientation="vertical"
+        android:id="@+id/transaction"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Record your time"
+            android:textSize="15dp"
+            android:background="#76b3d1eb"
+            android:textColor="@color/colorPrimaryDark"/>
+        <LinearLayout
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#b3bef9"
+                android:text="Select the Subcategory"/>
+
+            <Spinner
+                android:id="@+id/sp1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"></Spinner>
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <EditText
+                android:id="@+id/et_record"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:hint="Select date and type hours"
+                android:inputType="numberDecimal"
+                android:textSize="10dp" />
+
+            <Button
+                android:onClick="SetChosenDate"
+                android:id="@+id/btn_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Date"
+                android:textAllCaps="false"
+                android:background="@color/SmallButtonColor4"
+                android:textColor="@color/ButtonText"
+                android:layout_margin="5dp"
+                android:textSize="10dp"/>
+
+            <Button
+                android:onClick="RecordHours"
+                android:id="@+id/Confirm1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Confirm"
+                android:textAllCaps="false"
+                android:background="@color/SmallButtonColor4"
+                android:textColor="@color/ButtonText"
+                android:layout_margin="5dp"
+                android:textSize="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="#FF00FF00" />
+
+    <!-- 4th Linear Layout-->
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Create/Modify Your Subcategories"
+            android:background="#76b3d1eb"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/newitem"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <EditText
+                    android:id="@+id/et_sub"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:hint="Select and Type Your new Subcategory"
+                    android:textSize="9dp" />
+                <Spinner
+                    android:id="@+id/sp2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    ></Spinner>
+
+                <Button
+                    android:onClick="CreateSubcategory"
+                    android:id="@+id/Confirm2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="Create"
+                    android:textAllCaps="false"
+                    android:background="@color/SmallButtonColor5"
+                    android:textColor="@color/ButtonText"
+                    android:layout_margin="5dp"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
